@@ -6,7 +6,7 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #e6f1fc;
+  --bg-color: #b8d9fc;
   --primary-color: #282929;
   --secondary-color: #90b2d6;
   --primary-shadow: #8b8eaf;
@@ -20,6 +20,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 
 /* CSS Resets */
 * {
@@ -45,4 +46,5 @@ a:hover {
 
 body {
   font-family: var(--font-family);
+  background-color: #d7e8fa;
 }
