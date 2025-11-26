@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #000;
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh; /* let it grow */
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container2 {
+  width: 100%;
+  min-height: 100vh; /* let it grow */
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-content {
+  padding-left: 5%;
+  padding-top: 5%;
+  z-index: 2;
+}
+
+.text-content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  opacity: 50%;
+}
+
+.text-content p {
+  font-size: 1.3rem;
+  margin-top: -25px;
+}
+
+.text-content2 {
+  padding-top: 0%;
+  z-index: 2;
+  text-align: center;
+}
+
+.text-content2 h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-top: -10%;
+}
+
+.text-content2 p {
+  font-size: 1.3rem;
+  margin-top: -15px;
+}
+
+.section-title {
+  font-family: "Space Mono", monospace;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.wave-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wave-image {
+  filter: invert(1);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wave-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* start fade halfway down the image */
+  left: 0;
+  width: 100%;
+  height: 60%; /* stretch to bottom */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    #000 50%,
+    #000 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.github-link {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  z-index: 999;
+}
+
+.github-icon {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.social-dropdown {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  text-align: right;
+  z-index: 999;
+}
+
+#social-toggle {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Space Mono", monospace;
+}
+
+#social-toggle:hover {
+  opacity: 0.6;
+  transform: none;
+}
+
+.dropdown-menu {
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  font-family: "Space Mono", monospace;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.contact-dropdown {
+  position: absolute;
+  top: 100px;
+  right: 235px;
+  text-align: right;
+  z-index: 999;
+}
+
+#contact-toggle {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Space Mono", monospace;
+}
+
+#contact-toggle:hover {
+  opacity: 0.6;
+}
+
+#contact-menu button {
+  all: unset;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: white;
+  font-family: "Space Mono", monospace;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+#contact-menu button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.about-dropdown {
+  position: absolute;
+  top: 100px;
+  right: 370px;
+  z-index: 999;
+}
+
+#about-toggle {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 16px 32px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+#about-toggle:hover {
+  opacity: 0.6;
+}
